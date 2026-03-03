@@ -17,12 +17,15 @@ h1, h2, h3 {
 }
 
 .hero {
-  height: 90vh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
-  background: #f5f5f7;
+  background: 
+    linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.35)),
+    url("hero4.png") center/cover no-repeat;
+  color: white;
 }
 
 .hero h1 {
