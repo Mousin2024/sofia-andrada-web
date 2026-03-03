@@ -113,3 +113,8 @@ footer {
   font-size: 14px;
   color: #6e6e73;
 }
+.logo {
+  width: 140px;
+  max-width: 50%;
+  margin-bottom: 25px;
+}
