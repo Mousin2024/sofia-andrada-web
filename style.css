@@ -39,7 +39,7 @@ padding:30px;
 
 .logo{
 
-width:100px;
+width:120px;
 
 }
 
@@ -62,12 +62,11 @@ color:#d4af37;
 }
 
 
-
 /* HERO */
 
 .hero{
 
-height:80vh;
+height:75vh;
 
 background:url("hero4.png") center/cover no-repeat;
 
@@ -91,64 +90,37 @@ background:rgba(0,0,0,0.35);
 
 }
 
-.hero-content{
 
-position:relative;
-z-index:2;
+/* SCROLL INDICATOR */
 
-text-align:center;
-color:white;
+.scroll-indicator{
 
-}
+position:absolute;
 
-.hero-content h1{
+bottom:40px;
+left:50%;
 
-font-family:'Allura', cursive;
+transform:translateX(-50%);
 
-font-size:80px;
+opacity:0.8;
 
-font-weight:normal;
+animation:scrollAnim 2s infinite;
 
 }
 
-.hero-content p{
+.scroll-indicator img{
 
-margin-top:10px;
-
-letter-spacing:2px;
-font-size:16px;
+width:60px;
 
 }
 
-.hero-btn{
+@keyframes scrollAnim{
 
-display:inline-block;
-
-margin-top:25px;
-
-padding:12px 30px;
-
-border:1px solid white;
-
-border-radius:30px;
-
-color:white;
-
-text-decoration:none;
-
-font-size:14px;
-
-transition:0.3s;
+0%{transform:translate(-50%,0);}
+50%{transform:translate(-50%,12px);}
+100%{transform:translate(-50%,0);}
 
 }
-
-.hero-btn:hover{
-
-background:white;
-color:black;
-
-}
-
 
 
 /* PORTFOLIO */
@@ -216,8 +188,6 @@ font-size:30px;
 
 }
 
-
-
 .portfolio-grid{
 
 display:grid;
@@ -260,7 +230,6 @@ font-size:13px;
 letter-spacing:1px;
 
 }
-
 
 
 /* FOOTER */
