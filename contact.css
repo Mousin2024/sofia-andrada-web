@@ -51,6 +51,8 @@ margin-bottom:30px;
 .contact-info{
 
 margin-bottom:40px;
+max-width:100%;
+overflow:hidden;
 
 }
 
@@ -58,6 +60,25 @@ margin-bottom:40px;
 
 margin:10px 0;
 font-size:16px;
+
+/* 🔥 SOLUCIÓN CLAVE */
+word-break: break-all;
+overflow-wrap: anywhere;
+
+}
+
+/* LINKS (EMAIL Y TELÉFONO) */
+
+.contact-info a{
+
+color:#C6A75E;
+text-decoration:none;
+
+}
+
+.contact-info a:hover{
+
+text-decoration:underline;
 
 }
 
@@ -81,6 +102,16 @@ border-radius:10px;
 border:1px solid #ddd;
 
 font-size:14px;
+
+outline:none;
+transition:0.3s;
+
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+
+border-color:#C6A75E;
 
 }
 
@@ -120,5 +151,6 @@ transition:0.3s;
 .contact-form button:hover{
 
 opacity:0.85;
+transform:translateY(-2px);
 
 }
