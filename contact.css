@@ -1,156 +1,76 @@
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+/* NAVBAR */
 
-body{
-font-family:'Inter', sans-serif;
-background:#f8f8f8;
-color:#333;
-}
-
-/* CONTENEDOR */
-
-.contact{
-min-height:100vh;
-display:flex;
-align-items:center;
-justify-content:center;
-padding:40px;
-}
-
-.contact-container{
-
-max-width:600px;
+.navbar{
+position:absolute;
+top:0;
 width:100%;
-
-background:white;
-padding:60px 40px;
-
-border-radius:20px;
-
-box-shadow:0 20px 40px rgba(0,0,0,0.05);
-
-text-align:center;
-
+z-index:100;
 }
 
-/* TITULO */
-
-.contact-container h1{
-
-font-family:'Playfair Display', serif;
-font-size:40px;
-margin-bottom:30px;
-
-}
-
-/* INFO */
-
-.contact-info{
-
-margin-bottom:40px;
-max-width:100%;
-overflow:hidden;
-
-}
-
-.contact-info p{
-
-margin:10px 0;
-font-size:16px;
-
-/* 🔥 SOLUCIÓN CLAVE */
-word-break: break-all;
-overflow-wrap: anywhere;
-
-}
-
-/* LINKS (EMAIL Y TELÉFONO) */
-
-.contact-info a{
-
-color:#C6A75E;
-text-decoration:none;
-
-}
-
-.contact-info a:hover{
-
-text-decoration:underline;
-
-}
-
-/* FORM */
-
-.contact-form{
-
+.nav-inner{
+max-width:1200px;
+margin:auto;
 display:flex;
-flex-direction:column;
-gap:15px;
-
+justify-content:space-between;
+align-items:center;
+padding:30px;
 }
 
-.contact-form input,
-.contact-form textarea{
+.logo{
+width:130px;
+}
 
-padding:14px;
+nav{
+display:flex;
+}
 
-border-radius:10px;
-
-border:1px solid #ddd;
-
+nav a{
+color:#333; /* 🔥 importante (fondo claro) */
+text-decoration:none;
+margin-left:30px;
 font-size:14px;
-
-outline:none;
-transition:0.3s;
-
+letter-spacing:2px;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus{
-
-border-color:#C6A75E;
-
+nav a:hover{
+color:#C6A75E;
 }
 
-.contact-form textarea{
+/* MENU MOVIL */
 
-min-height:120px;
-resize:none;
-
-}
-
-/* BOTON */
-
-.contact-form button{
-
-margin-top:10px;
-
-padding:14px;
-
-border:none;
-
-border-radius:30px;
-
-background:#C6A75E;
-
-color:white;
-
-font-size:14px;
-
-letter-spacing:1px;
-
+.menu-toggle{
+display:none;
+font-size:30px;
+color:#333;
 cursor:pointer;
-
-transition:0.3s;
-
 }
 
-.contact-form button:hover{
+/* RESPONSIVE NAV */
 
-opacity:0.85;
-transform:translateY(-2px);
+@media (max-width:768px){
+
+.menu-toggle{
+display:block;
+}
+
+nav{
+position:absolute;
+top:80px;
+right:0;
+background:white;
+flex-direction:column;
+width:200px;
+padding:20px;
+display:none;
+box-shadow:0 10px 30px rgba(0,0,0,0.1);
+}
+
+nav a{
+margin:10px 0;
+}
+
+nav.active{
+display:flex;
+}
 
 }
