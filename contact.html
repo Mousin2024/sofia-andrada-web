@@ -10,81 +10,81 @@
 <link rel="stylesheet" href="contact.css">
 
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap" rel="stylesheet">
-
 </head>
 
 <body>
 
-<!-- NAVBAR -->
+<!-- NAVBAR (IGUAL QUE HOME) -->
 
 <header class="navbar">
+  <div class="nav-inner">
 
-<div class="nav-inner">
+    <img src="logo4.png" class="logo">
 
-<img src="logo4.png" class="logo">
+    <div class="menu-toggle" id="menu-toggle">
+      ☰
+    </div>
 
-<div class="menu-toggle" id="menu-toggle">
-☰
-</div>
+    <nav id="nav-menu">
+      <a href="index.html">Inicio</a>
+      <a href="https://instagram.com/sofiaandrada.maquilladora" target="_blank">Portfolio</a>
+      <a href="contact.html">Contacto</a>
+    </nav>
 
-<nav id="nav-menu">
-
-<a href="index.html">Inicio</a>
-<a href="https://instagram.com/sofiaandrada.maquilladora" target="_blank">Portfolio</a>
-<a href="contact.html">Contacto</a>
-
-</nav>
-
-</div>
-
+  </div>
 </header>
 
-<!-- CONTENIDO -->
+<!-- HERO CONTACTO -->
+
+<section class="contact-hero">
+  <div class="overlay"></div>
+  <h1>Contacto</h1>
+</section>
+
+<!-- FORMULARIO -->
 
 <section class="contact">
 
-<div class="contact-container">
+  <div class="contact-container">
 
-<h1>Contacto</h1>
+    <div class="contact-info">
+      <p><strong>Teléfono:</strong> <a href="tel:600000000">600 00 00 00</a></p>
+      <p><strong>Email:</strong> 
+        <a href="mailto:sofiaandradamaquilladora@gmail.com">
+          sofiaandradamaquilladora@gmail.com
+        </a>
+      </p>
+    </div>
 
-<div class="contact-info">
+    <form class="contact-form" action="https://formsubmit.co/sofiaandradamaquilladora@gmail.com" method="POST">
 
-<p>
-<strong>Teléfono:</strong> 
-<a href="tel:+34600000000">600 00 00 00</a>
-</p>
+      <input type="text" name="nombre" placeholder="Nombre completo" required>
 
-<p>
-<strong>Email:</strong> 
-<a class="email" href="mailto:Sofiaandradamaquilladora@gmail.com">
-Sofiaandradamaquilladora@gmail.com
-</a>
-</p>
+      <input type="tel" name="telefono" placeholder="Teléfono" required>
 
-</div>
+      <input type="email" name="email" placeholder="Correo electrónico" required>
 
-<form action="https://formspree.io/f/xblyqkna" method="POST" class="contact-form">
+      <textarea name="mensaje" placeholder="Escribe tu mensaje..." required></textarea>
 
-<input type="text" name="name" placeholder="Tu nombre" required>
+      <button type="submit">Enviar mensaje</button>
 
-<input type="email" name="email" placeholder="Tu email" required>
+      <!-- Evita captcha -->
+      <input type="hidden" name="_captcha" value="false">
 
-<textarea name="message" placeholder="Tu mensaje" required></textarea>
+    </form>
 
-<button type="submit">Enviar mensaje</button>
-
-</form>
-
-</div>
+  </div>
 
 </section>
+
+<!-- SCRIPT MENU -->
 
 <script>
 const toggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("nav-menu");
 
 toggle.addEventListener("click", () => {
-menu.classList.toggle("active");
+  menu.classList.toggle("active");
 });
 </script>
 
