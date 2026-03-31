@@ -171,6 +171,94 @@ color:white;
 transform:translateY(-2px);
 }
 
+/* CONTACTO HOME */
+
+.home-contact{
+padding:120px 20px;
+background:#f5f5f5;
+display:flex;
+justify-content:center;
+}
+
+.home-contact-container{
+max-width:700px;
+width:100%;
+background:white;
+padding:60px 40px;
+border-radius:25px;
+box-shadow:0 20px 50px rgba(0,0,0,0.05);
+text-align:center;
+}
+
+/* TITULO */
+
+.home-contact-container h2{
+font-family:'Playfair Display', serif;
+font-size:42px;
+margin-bottom:30px;
+color:#222;
+}
+
+/* FORM reutiliza estilos */
+
+.contact-form{
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+.contact-form input,
+.contact-form textarea{
+padding:16px;
+border-radius:12px;
+border:1px solid #ddd;
+font-size:14px;
+outline:none;
+transition:0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+border-color:#C6A75E;
+}
+
+.contact-form textarea{
+min-height:140px;
+resize:none;
+}
+
+.contact-form button{
+margin-top:10px;
+padding:16px;
+border:none;
+border-radius:40px;
+background:#C6A75E;
+color:white;
+font-size:14px;
+letter-spacing:2px;
+cursor:pointer;
+transition:0.3s;
+}
+
+.contact-form button:hover{
+transform:translateY(-2px);
+opacity:0.9;
+}
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+
+.home-contact-container{
+padding:40px 25px;
+}
+
+.home-contact-container h2{
+font-size:32px;
+}
+
+}
+
 /* FOOTER */
 
 footer{
