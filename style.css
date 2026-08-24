@@ -1,178 +1,393 @@
-```html
-<!DOCTYPE html>
-<html lang="es">
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+body{
+  font-family:'Inter', sans-serif;
+  background:white;
+  color:#333;
+}
 
-  <title>Sofía Andrada | Maquilladora Profesional</title>
+/* =========================
+   NAVBAR
+========================= */
 
-  <link rel="stylesheet" href="style.css">
+.navbar{
+  position:absolute;
+  top:0;
+  width:100%;
+  z-index:100;
+}
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Inter:wght@300;400&display=swap"
-    rel="stylesheet">
-</head>
+.nav-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:30px;
+}
 
-<body>
+.logo{
+  width:130px;
+  height:auto;
+}
 
-  <!-- NAVBAR -->
+nav{
+  display:flex;
+}
 
-  <header class="navbar">
-    <div class="nav-inner">
+nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:30px;
+  font-size:14px;
+  letter-spacing:2px;
+  transition:0.3s;
+}
 
-      <img src="logo4.png" class="logo" alt="Sofía Andrada">
+nav a:hover{
+  color:#d4af37;
+}
 
-      <div class="menu-toggle" id="menu-toggle">
-        ☰
-      </div>
+/* =========================
+   MENU MOVIL
+========================= */
 
-      <nav id="nav-menu">
-        <a href="#">Inicio</a>
-        <a href="https://instagram.com/sofiaandrada.maquilladora" target="_blank" rel="noopener noreferrer">
-          Portfolio
-        </a>
-        <a href="contact.html">Contacto</a>
-      </nav>
+.menu-toggle{
+  display:none;
+  font-size:30px;
+  color:white;
+  cursor:pointer;
+}
 
-    </div>
-  </header>
+/* =========================
+   HERO
+========================= */
 
+.hero{
+  height:75vh;
+  background:url("hero4.png") center/cover no-repeat;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+}
 
-  <!-- HERO -->
+.hero-overlay{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background:rgba(0,0,0,0.35);
+}
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
+/* =========================
+   SCROLL
+========================= */
 
-    <div class="scroll-indicator">
-      <img src="scroll.png" alt="Desplazar hacia abajo">
-    </div>
-  </section>
+.scroll-indicator{
+  position:absolute;
+  bottom:40px;
+  left:50%;
+  transform:translateX(-50%);
+  opacity:0.8;
+  animation:scrollAnim 2s infinite;
+}
 
+.scroll-indicator img{
+  width:60px;
+  height:auto;
+}
 
-  <!-- PORTFOLIO -->
+@keyframes scrollAnim{
+  0%{
+    transform:translate(-50%,0);
+  }
 
-  <section class="portfolio">
+  50%{
+    transform:translate(-50%,12px);
+  }
 
-    <div class="portfolio-container">
+  100%{
+    transform:translate(-50%,0);
+  }
+}
 
-      <div class="portfolio-big">
-        <img src="portfolio1.jpg" alt="Trabajo de maquillaje de Sofía Andrada">
-      </div>
+/* =========================
+   PORTFOLIO
+========================= */
 
-      <div class="portfolio-grid">
+.portfolio{
+  padding:120px 40px;
+  background:#f5f5f5;
+}
 
-        <div class="portfolio-item">
-          <img src="portfolio2.jpg" alt="Trabajo de maquillaje">
-        </div>
+.portfolio-container{
+  max-width:1200px;
+  margin:auto;
+}
 
-        <div class="portfolio-item">
-          <img src="portfolio3.jpg" alt="Trabajo de maquillaje">
-        </div>
+.portfolio-big{
+  margin-bottom:40px;
+}
 
-        <div class="portfolio-item">
-          <img src="portfolio4.jpg" alt="Trabajo de maquillaje">
-        </div>
+.portfolio-big img{
+  width:100%;
+  height:500px;
+  object-fit:cover;
+  border-radius:12px;
+  display:block;
+}
 
-      </div>
+/* =========================
+   GRID PORTFOLIO
+========================= */
 
-      <!-- BOTÓN PORTFOLIO -->
+.portfolio-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
 
-      <div class="portfolio-button">
-        <a
-          href="https://www.instagram.com/sofiaandrada.maquilladora/"
-          target="_blank"
-          rel="noopener noreferrer">
-          Descubre nuestros trabajos
-        </a>
-      </div>
+.portfolio-item{
+  overflow:hidden;
+  border-radius:12px;
+}
 
-    </div>
+.portfolio-item img{
+  width:100%;
+  height:420px;
+  object-fit:cover;
+  display:block;
+  transition:0.5s;
+}
 
-  </section>
+.portfolio-item:hover img{
+  transform:scale(1.07);
+}
 
+/* =========================
+   BOTÓN PORTFOLIO
+========================= */
 
-  <!-- CONTACTO FINAL -->
+.portfolio-button{
+  display:flex;
+  justify-content:center;
+  margin-top:50px;
+}
 
-  <section class="home-contact">
+.portfolio-button a{
+  padding:16px 40px;
+  border:1px solid #C6A75E;
+  color:#C6A75E;
+  text-decoration:none;
+  border-radius:40px;
+  font-size:14px;
+  letter-spacing:2px;
+  transition:0.3s;
+}
 
-    <div class="home-contact-container">
+.portfolio-button a:hover{
+  background:#C6A75E;
+  color:white;
+  transform:translateY(-2px);
+}
 
-      <h2>Contáctanos</h2>
+/* =========================
+   CONTACTO HOME
+========================= */
 
-      <form
-        class="contact-form"
-        action="https://formsubmit.co/sofiaandradamaquilladora@gmail.com"
-        method="POST">
+.home-contact{
+  padding:120px 20px;
+  background:#f5f5f5;
+  display:flex;
+  justify-content:center;
+}
 
-        <input
-          type="text"
-          name="nombre"
-          placeholder="Nombre completo"
-          required>
+.home-contact-container{
+  max-width:700px;
+  width:100%;
+  background:white;
+  padding:60px 40px;
+  border-radius:25px;
+  box-shadow:0 20px 50px rgba(0,0,0,0.05);
+  text-align:center;
+}
 
-        <input
-          type="tel"
-          name="telefono"
-          placeholder="Teléfono"
-          required>
+/* =========================
+   TITULO CONTACTO
+========================= */
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Correo electrónico"
-          required>
+.home-contact-container h2{
+  font-family:'Playfair Display', serif;
+  font-size:42px;
+  margin-bottom:30px;
+  color:#222;
+}
 
-        <textarea
-          name="mensaje"
-          placeholder="Escribe tu mensaje..."
-          required></textarea>
+/* =========================
+   FORMULARIO
+========================= */
 
-        <button type="submit">
-          Enviar mensaje
-        </button>
+.contact-form{
+  display:flex;
+  flex-direction:column;
+  gap:15px;
+}
 
-        <input
-          type="hidden"
-          name="_captcha"
-          value="false">
+.contact-form input,
+.contact-form textarea{
+  padding:16px;
+  border-radius:12px;
+  border:1px solid #ddd;
+  font-size:14px;
+  outline:none;
+  transition:0.3s;
+  font-family:'Inter', sans-serif;
+}
 
-      </form>
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color:#C6A75E;
+}
 
-    </div>
+.contact-form textarea{
+  min-height:140px;
+  resize:none;
+}
 
-  </section>
+.contact-form button{
+  margin-top:10px;
+  padding:16px;
+  border:none;
+  border-radius:40px;
+  background:#C6A75E;
+  color:white;
+  font-size:14px;
+  letter-spacing:2px;
+  cursor:pointer;
+  transition:0.3s;
+}
 
+.contact-form button:hover{
+  transform:translateY(-2px);
+  opacity:0.9;
+}
 
-  <!-- IMAGEN FINAL -->
+/* =========================
+   IMAGEN FINAL
+========================= */
 
-  <section class="final-image">
-    <img
-      src="portada1.jpg"
-      alt="Sofía Andrada - Maquilladora Profesional">
-  </section>
+.final-image{
+  width:100%;
+  overflow:hidden;
+  background:#f5f5f5;
+  line-height:0;
+}
 
+.final-image img{
+  width:100%;
+  height:auto;
+  display:block;
+  object-fit:cover;
+}
 
-  <!-- FOOTER -->
+/* =========================
+   FOOTER
+========================= */
 
-  <footer>
-    <p>© 2026 Sofía Andrada</p>
-  </footer>
+footer{
+  padding:50px;
+  text-align:center;
+  color:#777;
+  font-size:14px;
+  background:#f5f5f5;
+}
 
+/* =========================
+   RESPONSIVE
+========================= */
 
-  <!-- SCRIPT MENU -->
+@media (max-width:768px){
 
-  <script>
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("nav-menu");
+  /* NAV */
 
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("active");
-    });
-  </script>
+  .menu-toggle{
+    display:block;
+  }
 
-</body>
+  nav{
+    position:absolute;
+    top:80px;
+    right:0;
+    background:rgba(0,0,0,0.95);
+    flex-direction:column;
+    width:220px;
+    padding:20px;
+    display:none;
+    border-radius:10px 0 0 10px;
+  }
 
-</html>
-```
+  nav a{
+    margin:12px 0;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  /* HERO */
+
+  .hero{
+    height:70vh;
+  }
+
+  /* PORTFOLIO */
+
+  .portfolio{
+    padding:80px 20px;
+  }
+
+  .portfolio-grid{
+    grid-template-columns:1fr;
+  }
+
+  .portfolio-big img{
+    height:300px;
+  }
+
+  .portfolio-item img{
+    height:400px;
+  }
+
+  /* CONTACTO */
+
+  .home-contact{
+    padding:80px 20px;
+  }
+
+  .home-contact-container{
+    padding:40px 25px;
+  }
+
+  .home-contact-container h2{
+    font-size:32px;
+  }
+
+  /* IMAGEN FINAL */
+
+  .final-image img{
+    width:100%;
+    height:auto;
+  }
+
+  /* FOOTER */
+
+  footer{
+    padding:40px 20px;
+  }
+}
